@@ -2132,8 +2132,6 @@ export default class Convertor {
     const reportIndexFilePath = path.join(__dirname, '../', 'report/index.html')
     const reportBundleFilePath = path.join(__dirname, '../', 'report/static/js/bundle.js')
     const reportStyleFilePath = path.join(__dirname, '../', 'report/static/css/main.css')
-    const fontBlodFilePath = path.join(__dirname, '../', 'report/static/media/HarmonyOS_Sans_SC_Bold.ttf')
-    const fontMediumFilePath = path.join(__dirname, '../', 'report/static/media/HarmonyOS_Sans_SC_Medium.ttf')
     const errMsgList = paseGlobalErrMsgs(globals.errCodeMsgs)
     const reportData: IReportData = {
       projectName: parseProjectName(this.root),
@@ -2148,8 +2146,6 @@ export default class Convertor {
       generateReportFile(reportIndexFilePath, reportDir, 'index.html')
       generateReportFile(reportBundleFilePath, path.join(reportDir, '/static/js'), 'bundle.js', reportData)
       generateReportFile(reportStyleFilePath, path.join(reportDir, '/static/css'), 'main.css')
-      generateReportFile(fontBlodFilePath, path.join(reportDir, '/static/media'), 'HarmonyOS_Sans_SC_Bold.ttf')
-      generateReportFile(fontMediumFilePath, path.join(reportDir, '/static/media'), 'HarmonyOS_Sans_SC_Medium.ttf')
       console.log(
         `转换报告已生成，请在浏览器中打开 ${path.join(this.convertRoot, 'report', 'report.html')} 查看转换报告`
       )
