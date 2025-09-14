@@ -5,11 +5,11 @@ import withWeapp, { cacheOptions } from "@tarojs/with-weapp";
 import { Block } from "@tarojs/components";
 import React from "react";
 import Taro from "@tarojs/taro";
-import AnFishTmpl from 'taroConvert/src/imports/AnFishTmpl.js';
-import ATmpl from 'taroConvert/src/imports/ATmpl.js';
-import AshMerTmpl from 'taroConvert/src/imports/AshMerTmpl.js';
-import AolTmpl from 'taroConvert/src/imports/AolTmpl.js';
-import AshTmpl from 'taroConvert/src/imports/AshTmpl.js';
+import AnFishTmpl from 'taroConvert/src/imports/AnFishTmpl.jsx';
+import ATmpl from 'taroConvert/src/imports/ATmpl.jsx';
+import AshMerTmpl from 'taroConvert/src/imports/AshMerTmpl.jsx';
+import AolTmpl from 'taroConvert/src/imports/AolTmpl.jsx';
+import AshTmpl from 'taroConvert/src/imports/AshTmpl.jsx';
 cacheOptions.setOptionsToCache({});
 @withWeapp(cacheOptions.getOptionsFromCache())
 class _C extends React.Component {

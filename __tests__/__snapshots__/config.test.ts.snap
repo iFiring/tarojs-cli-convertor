@@ -103,7 +103,7 @@ const {
 INFO [taro-cli-convertor] traversePages - 开始转换页面 
 pages/index/index 
 INFO [taro-cli-convertor] parseAst - 入参 
-{"sourceFilePath":"/wxProject/pages/index/index.js","outputFilePath":"/wxProject/taroConvert/src/pages/index/index.js","importStylePath":null,"depComponents":{},"imports":[],"pluginComponents":{}} 
+{"sourceFilePath":"/wxProject/pages/index/index.js","outputFilePath":"/wxProject/taroConvert/src/pages/index/index.jsx","importStylePath":null,"depComponents":{},"imports":[],"pluginComponents":{}} 
 INFO [taro-cli-convertor] parseAst - 解析ImportDeclaration 
 import { Block, View, Text } from "@tarojs/components"; 
 INFO [taro-cli-convertor] analyzeImportUrl - 入参 
@@ -351,7 +351,7 @@ const {
 INFO [taro-cli-convertor] traversePages - 开始转换页面 
 pages/index/index 
 INFO [taro-cli-convertor] parseAst - 入参 
-{"sourceFilePath":"/wxProject/pages/index/index.js","outputFilePath":"/wxProject/taroConvert/src/pages/index/index.js","importStylePath":null,"depComponents":{},"imports":[],"pluginComponents":{}} 
+{"sourceFilePath":"/wxProject/pages/index/index.js","outputFilePath":"/wxProject/taroConvert/src/pages/index/index.jsx","importStylePath":null,"depComponents":{},"imports":[],"pluginComponents":{}} 
 INFO [taro-cli-convertor] parseAst - 解析ImportDeclaration 
 import { Block, View, Text } from "@tarojs/components"; 
 INFO [taro-cli-convertor] analyzeImportUrl - 入参 
@@ -506,7 +506,7 @@ class App extends React.Component {
 export default App;,
   /wxProject/taroConvert/src/app.config.js => export default { pages: ['pages/index/index'] }
 ,
-  /wxProject/taroConvert/src/pages/index/index.js => import withWeapp, { cacheOptions } from '@tarojs/with-weapp'
+  /wxProject/taroConvert/src/pages/index/index.jsx => import withWeapp, { cacheOptions } from '@tarojs/with-weapp'
 import { Block, View, Text } from '@tarojs/components'
 import React from 'react'
 import Taro from '@tarojs/taro'
@@ -533,7 +533,25 @@ export default _C
   /wxProject/taroConvert/src/pages/index/index.config.js => export default {}
 ,
   /wxProject/taroConvert/report => ,
-  /wxProject/taroConvert/report/index.html => <!doctype html><html lang="en"><head><meta charset="utf-8"/><link rel="icon" href="./favicon.ico"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="theme-color" content="#000000"/><meta name="description" content="Web site created using create-react-app"/><title>convert report</title><script defer="defer" src="./static/js/bundle.js"></script><link href="./static/css/main.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>,
+  /wxProject/taroConvert/report/index.html => <!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="./favicon.ico" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <title>convert report</title>
+  <script defer="defer" src="./static/js/bundle.js"></script>
+  <link href="./static/css/main.css" rel="stylesheet">
+</head>
+
+<body><noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+</body>
+
+</html>,
   /wxProject/taroConvert/report/static/js => ,
   /wxProject/taroConvert/report/static/js/bundle.js => /******/ (function() { / webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
@@ -56343,6 +56361,5 @@ var root=client.createRoot(document.getElementById('root'));root.render(/*#__PUR
 
 
 /*# sourceMappingURL=main.css.map*/,
-  /wxProject/taroConvert/report/static/media => ,
 }
 `;

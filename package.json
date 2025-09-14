@@ -8,9 +8,9 @@
   "scripts": {
     "prod": "pnpm run build",
     "prebuild": "pnpm run clean",
-    "build": "./node_modules/.bin/tsc",
-    "dev": "./node_modules/.bin/tsc -w",
-    "clean": "./node_modules/.bin/rimraf dist",
+    "build": "tsc",
+    "dev": "tsc -w",
+    "clean": "rimraf dist",
     "lint": "eslint src --ext .js,.jsx,.ts,.tsx",
     "format": "prettier --write \"{src, __tests__}/**/*.{ts,tsx,js,jsx}\" && eslint src  __tests__ --ext .js --ext .jsx --ext .ts --ext .tsx --fix",
     "test": "jest",
@@ -66,6 +66,7 @@
     "jest-environment-node": "^29.7.0",
     "jest-light-runner": "^0.6.0",
     "jest-preset-stylelint": "^7.0.0",
-    "ts-jest": "^29.1.2"
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.1"
   }
 }

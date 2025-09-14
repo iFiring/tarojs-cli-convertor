@@ -121,18 +121,13 @@ describe('转换报告', () => {
     const convertor = new Convertor(root, false)
     convertor.run()
 
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media/HarmonyOS_Sans_SC_Medium.ttf')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media/HarmonyOS_Sans_SC_Bold.ttf')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/favicon.ico')).toBeTruthy()
-    resFileMap.delete('/wxProject/taroConvert/report/static/media/HarmonyOS_Sans_SC_Medium.ttf')
-    resFileMap.delete('/wxProject/taroConvert/report/static/media/HarmonyOS_Sans_SC_Bold.ttf')
     resFileMap.delete('/wxProject/taroConvert/report/favicon.ico')
 
     expect(resFileMap).toMatchSnapshot()
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 })
 
@@ -171,7 +166,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('图片路径不存在', () => {
@@ -204,7 +198,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('没有注册插件', () => {
@@ -235,7 +228,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('自定义组件没有 js 文件', () => {
@@ -275,7 +267,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('引用插件路径格式异常', () => {
@@ -314,7 +305,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('插件配置信息为空，解析 plugin.json 失败', () => {
@@ -346,7 +336,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('project.config.json 中 pluginRoot 为空或未配置', () => {
@@ -367,7 +356,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('引用了未注册的插件组件', () => {
@@ -406,7 +394,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('三方依赖未安装', () => {
@@ -445,7 +432,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('js 文件中，引用不存在的文件（相对路径）', () => {
@@ -478,7 +464,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('js 文件中，引用不存在的文件（绝对路径）', () => {
@@ -511,7 +496,6 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 
   test('utils 文件中不存在 index.js 文件', () => {
@@ -569,6 +553,5 @@ describe('生成转换报告及日志', () => {
     expect(resFileMap.has('/wxProject/taroConvert/report')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/js')).toBeTruthy()
     expect(resFileMap.has('/wxProject/taroConvert/report/static/css')).toBeTruthy()
-    expect(resFileMap.has('/wxProject/taroConvert/report/static/media')).toBeTruthy()
   })
 })

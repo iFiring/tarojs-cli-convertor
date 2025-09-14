@@ -214,7 +214,7 @@ import withWeapp, { cacheOptions } from "@tarojs/with-weapp";
 import { Block, Button } from "@tarojs/components";
 import React from "react";
 import Taro from "@tarojs/taro";
-import ItemTmpl from '../../../imports/ItemTmpl.js';
+import ItemTmpl from '../../../imports/ItemTmpl.jsx';
 cacheOptions.setOptionsToCache({
   onClick() {
     console.log('click');
@@ -236,7 +236,7 @@ import withWeapp, { cacheOptions } from "@tarojs/with-weapp";
 import { Block } from "@tarojs/components";
 import React from "react";
 import Taro from "@tarojs/taro";
-import TemplateATmpl from 'taroConvert/src/imports/TemplateATmpl.js';
+import TemplateATmpl from 'taroConvert/src/imports/TemplateATmpl.jsx';
 cacheOptions.setOptionsToCache({});
 @withWeapp(cacheOptions.getOptionsFromCache())
 class _C extends React.Component {
