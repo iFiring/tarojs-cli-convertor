@@ -957,7 +957,7 @@ export default class Convertor {
                 }
                 const importPath = path.join(
                   self.importsDir,
-                  name + (wxs ? self.wxsIncrementId() : '') + (self.isTsProject ? '.ts' : '.js')
+                  name + (wxs ? self.wxsIncrementId() : '') + (self.isTsProject ? '.tsx' : '.jsx')
                 )
                 if (!self.hadBeenBuiltImports.has(importPath)) {
                   self.hadBeenBuiltImports.add(importPath)
@@ -1573,7 +1573,7 @@ export default class Convertor {
 
     const customTabbarPath = path.join(this.root, 'custom-tab-bar')
     if (fs.existsSync(customTabbarPath)) {
-      const customTabbarDistPath = this.getDistFilePath(customTabbarPath)
+      const customTabbarDistPath = this.getDistFilePath(customTabbarPath, this.isTsProject ? '.tsx' : '.jsx')
       copyFileToTaro(customTabbarPath, customTabbarDistPath)
       printLog(processTypeEnum.COPY, '自定义 TabBar', this.generateShowPath(customTabbarDistPath))
     }
