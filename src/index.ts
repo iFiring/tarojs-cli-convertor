@@ -1642,7 +1642,7 @@ export default class Convertor {
       }
 
       const pageJSPath = pagePath + this.fileTypes.SCRIPT // .js文件
-      const pageDistJSPath = this.getDistFilePath(pageJSPath)
+      const pageDistJSPath = this.getDistFilePath(pageJSPath, this.isTsProject ? '.tsx' : '.jsx')
       const pageConfigPath = pagePath + this.fileTypes.CONFIG // .json文件
       const pageStylePath = pagePath + this.fileTypes.STYLE // .wxss文件
       const pageTemplPath = pagePath + this.fileTypes.TEMPL // .wxml文件
@@ -1786,7 +1786,7 @@ export default class Convertor {
       this.hadBeenBuiltComponents.add(component)
 
       const componentJSPath = this.getComponentPath(component, this.fileTypes.SCRIPT)
-      const componentDistJSPath = this.getDistFilePath(componentJSPath)
+      const componentDistJSPath = this.getDistFilePath(componentJSPath, this.isTsProject ? '.tsx' : '.jsx')
       const componentConfigPath = this.getComponentPath(component, this.fileTypes.CONFIG)
       const componentStylePath = this.getComponentPath(component, this.fileTypes.STYLE)
       const componentTemplPath = this.getComponentPath(component, this.fileTypes.TEMPL)
